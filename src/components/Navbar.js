@@ -19,7 +19,7 @@ export default class Navbar extends Component {
         <Link to="/">
         <img src={logo} alt="Beach Resort"/>
         </Link>
-        <button type="button" className="nav-button" onClick={this.handleToggle}>
+        <button type="button" className="nav-btn" onClick={this.handleToggle}>
         <FaAlignRight className="nav-icon" />
         </button>
         </div>

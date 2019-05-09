@@ -25,7 +25,7 @@ export default class Services extends Component {
             },
             {
                 icon:<FaBeer/>,
-                title:"Strongest Beer",
+                title:"Craft Beers",
                 info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis enim et porttitor aliquam. Ut finibus volutpat massa, a convallis ex tristique eu. Suspendisse venenatis erat ac ante placerat ultrices. Suspendisse tristique sapien quis neque semper convallis.'
 
             }
@@ -33,10 +33,18 @@ export default class Services extends Component {
     }
   render() {
     return (
-      <div>
-        <Title title='Services'/>
-        
-      </div>
+      <section className="services">
+        <Title title='services'/>
+        <div className="services-center">
+        {this.state.services.map((item, index) => {
+          return <article key={index} className="service">
+          <span>{item.icon}</span>
+          <h6>{item.title}</h6>
+          <p>{item.info}</p>
+          </article>
+        })}
+        </div>
+      </section>
     )
   }
 }
