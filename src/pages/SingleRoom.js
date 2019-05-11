@@ -44,7 +44,8 @@ export default class SingleRoom extends Component {
       pets,
       images
     } = room;
-    let [main, ...defaultImages] = images;
+   // eslint-disable-next-line
+    const [main, ...defaultImages] = images;
     console.log(defaultImages);
 
     return (
